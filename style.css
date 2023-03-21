@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(28, 214, 65);
+  background: radial-gradient(
+    circle,
+    rgba(28, 214, 65, 1) 0%,
+    rgba(27, 213, 51, 1) 35%,
+    rgba(36, 218, 96, 1) 100%
+  );
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+  transition: all 0.3s ease-in-out;
+  animation: containerAnimation 5s linear infinite;
+}
+
+aside {
+  padding: 1rem 2rem;
+  width: 250px;
+  border-right: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 135, 100, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+main {
+  flex: 1;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+h2 {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 0 0 2rem;
+}
+
+h3 {
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 2rem 0 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 135, 100, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.person {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: block;
+  }
+  aside {
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 52.5%;
+  }
+}
+
+@keyframes containerAnimation {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
